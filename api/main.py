@@ -78,7 +78,7 @@ def get_response(question: str, file_data: Optional[str] = None) -> dict:
     ssl certification.Donot give step by step explanation just give the give code. Give it in a format so that the code can be extracted easily.
     For github based questions I want python code to use GitHub API.For GitHub username use ta1789 and Repository name use TDSProject_Test and for token use {git_token}
     For FastAPI based question use uvicorn with ip as 127.0.0.1 and port as 8002 and return the proper url in answer json and for sending any https request to a url handle the ssl certification issue like Disable SSL Verification in the httpx client by setting the verify parameter to False .
-    If the code asks for vercel the code should use vercel api.Donot use sys module in subprocess.If in any question it asks to send request to OpenAI send the request to {LLM_API_URL} with the token {TOKEN}. Print the output result for every code execution.
+    If the code asks for vercel the code should use vercel api.Donot use sys module in subprocess.If in any question it asks to send request to OpenAI send the request to {LLM_API_URL} with the token {TOKEN}. Print the output result for every code execution.Print the result of what is asked in the question in the code.
 
     **Question**: {question}
     """
