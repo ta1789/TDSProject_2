@@ -114,7 +114,7 @@ def execute_python_code(answer: str) -> dict:
                 text=True,
                 timeout=10
             )
-            result["answer"] = proc_result.stdout or "Execution complete."
+            result["answer"] = proc_result.stdout
         except subprocess.CalledProcessError as e:
             result["error"] = e.stderr
         except subprocess.TimeoutExpired:
