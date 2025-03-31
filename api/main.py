@@ -105,11 +105,11 @@ def execute_python_code(answer: str) -> dict:
     code_match = re.search(r'```python(.*?)```', answer, re.DOTALL)
     if code_match:
         clean_code = code_match.group(1).strip()
-        with open("code.py", 'w') as f:
+        with open("../tmp/code.py", 'w') as f:
             f.write(clean_code)
         try:
             proc_result = subprocess.run(
-                ["python", "code.py"],
+                ["python", "/tmp/code.py"],
                 capture_output=True,
                 text=True,
                 timeout=10
